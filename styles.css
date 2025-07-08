@@ -1,0 +1,203 @@
+/* Charity: water Brand Colors
+
+Primary Colors:
+- Yellow:     #FFC907
+- Blue:       #2E9DF7
+
+Secondary Colors:
+- Light Blue: #8BD1CB
+- Green:      #4FCB53
+- Orange:     #FF902A
+- Red:        #F5402C
+- Dark Green: #159A48
+- Pink:       #F16061
+
+*/
+
+canvas {
+    background: #4FCB53
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.overlay-content {
+    background: #fff;
+    padding: 40px 60px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+}
+
+.overlay-content p {
+    text-align: left;
+    font-size: 1em;
+    margin: 16px 0;
+    color: #222;
+}
+
+#startButton {
+    font-size: 1.2em;
+    padding: 12px 32px;
+    background: #2E9DF7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#startButton:hover {
+    background: #159A48;
+}
+
+#restartButton {
+    font-size: 1.2em;
+    padding: 12px 32px;
+    background: #F5402C;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#restartButton:hover {
+    background: #2E9DF7;
+}
+
+.upgrade-btn {
+    font-size: 1.3em;
+    padding: 16px 32px;
+    margin: 16px;
+    background: #fffbe6;
+    border: 2px solid #FFC907;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+    display: block;
+    width: 90%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#upgradeOptions .upgrade-btn:hover,
+.upgrade-btn:hover {
+    background: #FFF176;
+    border: 2px solid #2E9DF7;
+}
+
+#restartWinButton {
+    font-size: 1.2em;
+    padding: 12px 32px;
+    background: #2E9DF7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#extractionPopup {
+    position: fixed;
+    width: 300px;
+    height: 100px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    font-size: 1.2em;
+    color: #333;
+    z-index: 20;
+}
+
+#joystick-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    touch-action: none;
+}
+
+#joystick {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: white;
+    opacity: 0.6;
+    border-radius: 50%;
+    left: 30px;
+    top: 30px;
+    touch-action: none;
+}
+
+#joystick-aim-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    touch-action: none;
+}
+
+#joystick-aim {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: white;
+    opacity: 0.6;
+    border-radius: 50%;
+    right: 30px;
+    top: 30px;
+    touch-action: none;
+}
+
+@media (orientation: landscape) and (max-width: 800px) {
+  .overlay{
+    font-size: 0.85em;
+    line-height: 10px;
+  }
+
+  .overlay-content {
+    font-size: 0.8em;
+  }
+
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+
+  .overlay-content {
+    font-size: 0.8em;
+    margin: 10px;
+    padding: 20px;
+  }
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Water Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="extractionPopup"  style="display:none;">
+          <p>🚁 Extraction point revealed! Reach it to win!</p>
+    </div>
+
+    <div id="winScreen" class="overlay" style="display:none;">
+        <div class="overlay-content">
+            <h2>🏆 You Win! 🏆</h2>
+            <div class="summary"></div>
+            <button id="restartWinButton">Restart</button>
+        </div>
+
+    </div>
+
+    <div id="startScreen" class="overlay">
+        <div class="overlay-content">
+            <img src="/img/cw_logo_horizontal.png" alt="Charity Water Logo" style="width:200px;margin-bottom:20px;">
+            <h2>URGENT LETTER</h2>
+            <p> Hero, our village has been attacked and our droplet friends have been kidnapped!</p>
+            <p> Please help us bring them home in a full canister and restore harmony to our community.</p>
+            <p> > Use WASD/Arrows or Left Joycon to move.</p>
+            <p> > Use your mouse or Right joycon to aim.</p>
+            <p> > Use M1/Spacebar or Right joycon to shoot bubbles.</p>
+            <p> Collecting cleansed water droplets will increase your progression and friendship with the water droplets!</p>
+            <p> Good luck, Hero! 🌻</p>
+            <button id="startButton">Start Game</button>
+        </div>
+    </div>
+
+    <div id="gameOverScreen" class="overlay" style="display:none;">
+        <div class="overlay-content">
+            <img src="/img/cw_logo_horizontal.png" alt="Charity Water Logo" style="width:200px;margin-bottom:20px;">
+            <h2>Game Over</h2>
+            <div class="summary"></div>
+            <button id="restartButton">Restart</button>
+        </div>
+    </div>
+
+    <div id="friendshipUpgradeScreen" class="overlay" style="display:none;">
+        <div class="overlay-content">
+            <img src="/img/cw_logo_horizontal.png" alt="Charity Water Logo" style="width:200px;margin-bottom:20px;">
+            <h2>🎉 Friendship Bonus! 🎉</h2>
+            <div id="upgradeOptions"></div>
+        </div>
+    </div>
+    <canvas id="canvas" width="800" height="400"></canvas>
+
+    <div id="joystick-container" >
+        <div id="joystick" class="joystick"></div>
+    </div>
+    <div id="shoot-joystick-container">
+        <div id="shoot-joystick" class="joystick"></div>
+    </div>
+
+    <script src="entities.js"></script>
+    <script src="joystick.js"></script>
+    <script src="shoot-joystick.js"></script>
+    <script src="events.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
