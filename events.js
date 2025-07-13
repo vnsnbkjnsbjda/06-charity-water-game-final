@@ -35,7 +35,7 @@ function tryFireBubble() {
 }
 
 let level = 0;  // Game level
-let MAX_ENEMIES = 1;
+let MAX_ENEMIES = 4;
 
 const ENEMY_TYPES = [1, 2, 3]; // 1: brown, 2: purple, 3: gray
 let enemyProjectiles = [];
