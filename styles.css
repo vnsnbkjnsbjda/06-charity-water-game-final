@@ -15,17 +15,44 @@ Secondary Colors:
 */
 
 canvas {
-    background: #4FCB53
+    /*make background a image*/
+    background: url('sprites/grass_tile.png');
+    background-repeat: repeat;
+    image-rendering: pixelated; /* optional: for retro games */
 }
 
 html, body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
+
+
+header{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1em 5em;
+}
+
+header a{
+    text-decoration: none;
+    background: #FF902A;
+    color: white;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+header a:hover{
+    background: #2E9DF7;
+}
+
 
 .overlay {
     position: fixed;
@@ -55,7 +82,7 @@ html, body {
     color: #222;
 }
 
-#startButton {
+.startButton {
     font-size: 1.2em;
     padding: 12px 32px;
     background: #2E9DF7;
@@ -66,11 +93,11 @@ html, body {
     margin-top: 20px;
 }
 
-#startButton:hover {
+.startButton:hover {
     background: #159A48;
 }
 
-#restartButton {
+.restartButton {
     font-size: 1.2em;
     padding: 12px 32px;
     background: #F5402C;
@@ -79,6 +106,10 @@ html, body {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 20px;
+}
+
+.restartButton:hover{
+    background: #FF902A;
 }
 
 #restartButton:hover {
@@ -105,17 +136,6 @@ html, body {
 .upgrade-btn:hover {
     background: #FFF176;
     border: 2px solid #2E9DF7;
-}
-
-#restartWinButton {
-    font-size: 1.2em;
-    padding: 12px 32px;
-    background: #2E9DF7;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
 }
 
 #extractionPopup {
@@ -180,7 +200,7 @@ html, body {
     touch-action: none;
 }
 
-@media (orientation: landscape) and (max-width: 800px) {
+@media (orientation: landscape) and (max-width: 850px) {
   .overlay{
     font-size: 0.85em;
     line-height: 10px;

@@ -34,7 +34,9 @@ function tryFireBubble() {
     }
 }
 
-const MAX_ENEMIES = 6;
+let level = 0;  // Game level
+let MAX_ENEMIES = 1;
+
 const ENEMY_TYPES = [1, 2, 3]; // 1: brown, 2: purple, 3: gray
 let enemyProjectiles = [];
 
@@ -56,7 +58,7 @@ function spawnEnemy() {
         x = mapWidth / 2;
         y = Math.random() * mapHeight - mapHeight / 2;
     }
-    newGame.enemies.push(new Enemy(type, x, y));
+    newGame.enemies.push(new Enemy(type, x, y, difficulty, level));
 }
 
 // Bubble-enemy collision detection
@@ -165,6 +167,7 @@ function showFriendshipUpgrade() {
     const shuffled = upgrades.sort(() => 0.5 - Math.random());
     const choices = shuffled.slice(0, 3);
 
+    //update DOM
     choices.forEach((upgrade) => {
         const btn = document.createElement("button");
         btn.className = "upgrade-btn";
@@ -191,7 +194,6 @@ Bubble.createFromPlayer = function(player) {
     const speed = 4;
     const vx = Math.cos(angle) * speed;
     const vy = Math.sin(angle) * speed;
-    // Use upgraded radius if present
     return new Bubble(px, py, vx, vy, player.bubbleRadius || 8, "cyan");
 };
 
@@ -205,7 +207,7 @@ function showExtractionPopup() {
     popup.style.display = "block";
     setTimeout(() => {
         popup.style.display = "none";
-    }, 2500);
+    }, 3000);
 }
 
 function spawnExtractionPoint() {
